@@ -4,6 +4,11 @@ A scalable and modular boilerplate for building microservices using **TypeScript
 
 ---
 
+## Documentation and Architecture Details
+
+For those who want a deeper understanding of the platform, including its architecture or CI/CD workflows, comprehensive documentation is available in the `/docs` folder. This documentation provides detailed insights and examples for implementation and scalability, inspired by the principles used in [Scalable E-Commerce](https://github.com/Scalable-E-Commerce/Scalable-E-Commerce).
+
+
 ## Project Structure (Recommendation)  
 
 A well-organized folder structure is essential for maintainability and scalability. This boilerplate adopts a clean and modular architecture:  
