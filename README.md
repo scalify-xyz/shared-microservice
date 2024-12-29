@@ -91,33 +91,6 @@ The `docker-compose.yml` file includes pre-configured services for PostgreSQL, M
 
 ---
 
-## Contributing  
-
-We welcome contributions! Here's how you can contribute:  
-
-1. Fork the repository to your GitHub account.  
-2. Create a branch for your feature:  
-
-```bash  
-git checkout -b feature/feature-name  
-```  
-
-3. Commit your changes with a clear message:  
-
-```bash  
-git commit -am 'Add new feature'  
-```  
-
-4. Push the branch to your repository:  
-
-```bash  
-git push origin feature/feature-name  
-```  
-
-5. Open a Pull Request and describe your changes.  
-
----
-
 ## Additional Notes  
 
 This boilerplate is **CI/CD-ready** for deployment on AWS EC2 instances.  
