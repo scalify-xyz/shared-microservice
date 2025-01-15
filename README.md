@@ -17,7 +17,8 @@ A well-organized folder structure is essential for maintainability and scalabili
 src/  
 ├── Infra/        # Handles infrastructure concerns like database implementations and communication with external systems.  
 ├── Application/  # Contains the business logic and use cases of the microservice.  
-├── Domain/       # Represents the core entities and business rules. This layer is independent of external services.  
+├── Domain/       # Represents the core entities and business rules. This layer is independent of external services.
+├── Main/         # Interface exposed to the external world (API)
 ├── Shared/       # Includes utility functions, shared classes, and helpers used across multiple layers.  
 ```  
 
