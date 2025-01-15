@@ -6,7 +6,7 @@ A scalable and modular boilerplate for building microservices using **TypeScript
 
 ## Documentation and Architecture Details
 
-For those who want a deeper understanding of the platform, including its architecture or CI/CD workflows, comprehensive documentation is available in the `/docs` folder. This documentation provides detailed insights and examples for implementation and scalability, inspired by the principles used in [Scalable E-Commerce Docs](https://github.com/Scalable-E-Commerce/docs).
+For those who want a deeper understanding of the platform, including its architecture or CI/CD workflows, comprehensive documentation is available in the `/docs` folder. This documentation provides detailed insights and examples for implementation and scalability, inspired by the principles used in [Scalify E-Commerce Docs](https://github.com/scalify-xyz/docs).
 
 
 ## Project Structure (Recommendation)  
@@ -149,8 +149,6 @@ The following scripts and dependencies are essential for this project:
   - AWS Secrets Manager: `"@aws-sdk/client-secrets-manager": "^3.716.0"`  
 
 For a complete list of dependencies and scripts, refer to the `package.json` file.  
-
----
 
 ## License  
 
