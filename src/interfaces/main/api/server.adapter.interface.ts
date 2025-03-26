@@ -1,4 +1,4 @@
-import { IController } from "src/interfaces/infrastructure/controllers/controller.interface";
+import { AbstractController } from "src/interfaces/infrastructure/controllers/controller.interface";
 
 export interface IRequest {
     body: unknown;
@@ -20,7 +20,8 @@ export interface IRoutesAdapter<T> {
 }
 
 export abstract class AbstractRoute<T, TReq, TRes> implements IRoutesAdapter<T> {
-    constructor(protected controller: IController<TReq, TRes>) {}
+    constructor(
+        protected controller: AbstractController<TReq, TRes, unknown, unknown>) {}
     abstract execute(server: T): void;
 }
 
