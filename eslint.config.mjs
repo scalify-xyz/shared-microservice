@@ -42,6 +42,11 @@ export default [
           ],
           pathGroups: [
             {
+              pattern: "@scalify/**",
+              group: "builtin", 
+              position: "before",
+            },
+            {
               pattern: "@domain/**",
               group: "internal",
               position: "after",
