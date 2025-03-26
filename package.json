@@ -1,4 +1,14 @@
 {
+  "name": "@scalify/shared-microservice",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [ 
+    "build/**/*", 
+    "eslint.config.mjs",
+    ".prettierrc",
+    "tsconfig.json"
+  ],
   "scripts": {
     "start:dev": "NODE_ENV=dev tsx watch src/index.ts",
     "start:local-build": "NODE_ENV=dev node build/index.js",

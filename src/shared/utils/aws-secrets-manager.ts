@@ -12,7 +12,7 @@ interface SecretsManagerConfig {
   secretsMap: Record<string, string>;
 }
 
-export default class AWSSecretsManager {
+export class AWSSecretsManager {
   private client: SecretsManagerClient;
   private secretsMap: Record<string, string>;
 

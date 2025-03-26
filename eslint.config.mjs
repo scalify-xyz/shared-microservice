@@ -51,7 +51,12 @@ export default [
               position: "after",
             },
             {
-              pattern: "@infra/**",
+              pattern: "@infrastructure/**",
+              group: "internal",
+              position: "after",
+            },
+            {
+              pattern: "@interfaces/**",
               group: "internal",
               position: "after",
             },
