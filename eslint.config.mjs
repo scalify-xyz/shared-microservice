@@ -24,6 +24,7 @@ export default [
     rules: {
       quotes: ["error", "double"],
       semi: ["error", "always"],
+      "@typescript-eslint/no-explicit-any": "error",
       "comma-dangle": ["error", "always-multiline"],
       "arrow-parens": ["error", "always"],
       "@typescript-eslint/no-empty-interface": "off",
