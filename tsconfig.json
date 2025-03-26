@@ -31,6 +31,8 @@
       "outDir": "./build",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "declaration": true,   
+      "declarationMap": true,    
       "sourceMap": true,
       "allowSyntheticDefaultImports": true,
       "importHelpers": true,

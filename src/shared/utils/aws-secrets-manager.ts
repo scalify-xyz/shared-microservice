@@ -7,7 +7,7 @@ import {
   GetSecretValueCommandInput,
 } from "@aws-sdk/client-secrets-manager";
 
-interface SecretsManagerConfig {
+export interface SecretsManagerConfig {
   region?: string;
   secretsMap: Record<string, string>;
 }

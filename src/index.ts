@@ -1,1 +1,2 @@
-export { AWSSecretsManager } from "@shared/utils/aws-secrets-manager";
+export * from "./shared/utils/aws-secrets-manager";
+
