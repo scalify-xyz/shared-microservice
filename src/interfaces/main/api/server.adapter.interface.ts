@@ -20,8 +20,8 @@ export interface IRoutesAdapter<T> {
 }
 
 export abstract class AbstractRoute<T, TReq, TRes> implements IRoutesAdapter<T> {
-    private constructor(
-        protected controller: AbstractController<TReq, TRes, unknown, unknown>) {}
+    constructor(
+        protected controller: AbstractController<TReq, TRes, unknown, unknown>) { }
     abstract execute(server: T): void;
 }
 
