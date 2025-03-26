@@ -3,12 +3,16 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": [ 
-    "build/**/*", 
+  "private": false,
+  "files": [
+    "build/**/*",
     "eslint.config.mjs",
     ".prettierrc",
     "tsconfig.json"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start:dev": "NODE_ENV=dev tsx watch src/index.ts",
     "start:local-build": "NODE_ENV=dev node build/index.js",
