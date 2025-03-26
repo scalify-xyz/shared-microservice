@@ -1,4 +1,4 @@
-import { AbstractController } from "src/interfaces/infrastructure/controllers/controller.interface";
+import { AbstractController } from "@interfaces/infrastructure/controllers/controller.interface";
 
 export interface IRequest {
     body: unknown;
