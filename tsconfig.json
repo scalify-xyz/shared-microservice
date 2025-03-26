@@ -11,6 +11,9 @@
          "@infra/*": [
             "src/infra/*"
          ],
+         "@main/*": [
+            "src/main/*"
+         ],
          "@shared/*": [
             "src/shared/*"
          ]
@@ -29,6 +32,8 @@
       "allowSyntheticDefaultImports": true,
       "importHelpers": true,
       "esModuleInterop": true,
+      "strictFunctionTypes": true,
+      "noImplicitAny": true
    },
    "include": ["src", "src/**/*.ts", "types/**/*.ts"],
    "exclude": ["node_modules", ".vscode"],
