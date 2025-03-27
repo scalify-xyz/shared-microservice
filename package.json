@@ -1,14 +1,9 @@
 {
   "name": "@scalify/shared-microservice",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "private": false,
-  "exports": {
-    ".": "./build/index.js",    
-    "./utils": "./build/utils/index.js",
-    "./infrastructure": "./build/infrastructure/index.js"
-  },
   "files": [
     "build/**/*",
     "eslint.config.mjs",
