@@ -1,5 +1,7 @@
 import amqp, { Connection, Channel } from "amqplib/callback_api";
 
+import { NotificationModel } from "@infrastructure/models/notification.model";
+
 export class RabbitMQProvider {
   private connection!: Connection;
   private channel!: Channel;
@@ -29,12 +31,12 @@ export class RabbitMQProvider {
     });
   }
 
-  async publish(queue: string, message: object): Promise<void> {
+  async publish(queue: string, message: NotificationModel): Promise<void> {
     await this.channel.assertQueue(queue);
     this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)));
   }
 
-  async consume(queue: string, callback: (message: object) => void): Promise<void> {
+  async consume(queue: string, callback: (message: NotificationModel) => void): Promise<void> {
     await this.channel.assertQueue(queue);
     this.channel.consume(queue, (msg) => {
       if (msg) {
