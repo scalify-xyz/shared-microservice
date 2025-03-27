@@ -4,13 +4,13 @@ export class RabbitMQProvider {
   private connection!: Connection;
   private channel!: Channel;
 
-
-  private constructor(url: string) {
-    this.connect(url);
+  private constructor() {
   }
 
-  static create(url: string) {
-    return new RabbitMQProvider(url);
+  static async create(url: string) {
+    const provider = new RabbitMQProvider();
+    await provider.connect(url);
+    return provider;
   }
 
   private async connect(url: string): Promise<void> {
@@ -20,6 +20,7 @@ export class RabbitMQProvider {
         else resolve(conn);
       });
     });
+
     this.channel = await new Promise<Channel>((resolve, reject) => {
       this.connection.createChannel((err, channel) => {
         if (err) reject(err);
