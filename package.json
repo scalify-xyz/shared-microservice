@@ -1,6 +1,6 @@
 {
   "name": "@scalify/shared-microservice",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "private": false,
