@@ -1,9 +1,8 @@
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import eslintPluginImport from "eslint-plugin-import";
-import globals from "globals";
 import prettierPlugin from "eslint-plugin-prettier";
-import prettierConfig from "eslint-config-prettier";
+import globals from "globals";
 
 export default [
   {
@@ -89,7 +88,6 @@ export default [
         },
       ],
     },
-    ...prettierConfig,
     ignores: ["build/**/*", "!build/test.js"],
   },
 ];
