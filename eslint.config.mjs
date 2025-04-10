@@ -25,6 +25,29 @@ export default [
       },
     },
     rules: {
+      "@typescript-eslint/explicit-member-accessibility": [
+        "error",
+        {
+          accessibility: "explicit",
+          overrides: {
+            constructors: "explicit"
+          }
+        }
+      ],
+      "@typescript-eslint/parameter-properties": [
+        "error",
+        {
+          "allow": ["private readonly"],
+          prefer: "parameter-property"
+        }
+      ],
+      "@typescript-eslint/no-extraneous-class": [
+        "error",
+        {
+          allowConstructorOnly: false,
+          allowStaticOnly: true
+        }
+      ],
       "prettier/prettier": "error",
       "@typescript-eslint/no-explicit-any": "error",
       "@typescript-eslint/no-empty-interface": "off",
