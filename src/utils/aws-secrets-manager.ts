@@ -17,11 +17,15 @@ export class AWSSecretsManager {
   private secretsMap: Record<string, string>;
 
   constructor(config: SecretsManagerConfig) {
-    this.client = new SecretsManagerClient({ region: config.region || "sa-east-1" });
+    this.client = new SecretsManagerClient({
+      region: config.region || "sa-east-1",
+    });
     this.secretsMap = config.secretsMap;
   }
 
-  static async create(config: SecretsManagerConfig): Promise<AWSSecretsManager> {
+  static async create(
+    config: SecretsManagerConfig,
+  ): Promise<AWSSecretsManager> {
     const secretsManager = new AWSSecretsManager(config);
     await secretsManager.loadSecrets();
     return secretsManager;
@@ -38,7 +42,10 @@ export class AWSSecretsManager {
     }
   }
 
-  private async fetchAndSetSecret(envKey: string, secretId: string): Promise<void> {
+  private async fetchAndSetSecret(
+    envKey: string,
+    secretId: string,
+  ): Promise<void> {
     try {
       const response: GetSecretValueCommandOutput = await this.client.send(
         new GetSecretValueCommand({
@@ -48,9 +55,12 @@ export class AWSSecretsManager {
       );
 
       console.log(`Secret ${envKey} loaded successfully.`);
-      const secretValue = response.SecretString ? JSON.parse(response.SecretString) : null;
+      const secretValue = response.SecretString
+        ? JSON.parse(response.SecretString)
+        : null;
       if (secretValue && typeof secretValue === "object") {
-        process.env[envKey] = secretValue[envKey] as string || secretValue as string;
+        process.env[envKey] =
+          (secretValue[envKey] as string) || (secretValue as string);
       }
     } catch (error) {
       console.error(`Failed to fetch secret for ${envKey}:`, error);

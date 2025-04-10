@@ -2,6 +2,8 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 import eslintPluginImport from "eslint-plugin-import";
 import globals from "globals";
+import prettierPlugin from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
 
 export default [
   {
@@ -13,6 +15,7 @@ export default [
     plugins: {
       import: eslintPluginImport,
       "@typescript-eslint": tseslint,
+      prettier: prettierPlugin,
     },
     settings: {
       "import/resolver": {
@@ -22,9 +25,9 @@ export default [
       },
     },
     rules: {
-      quotes: ["error", "double"],
-      semi: ["error", "always"],
+      "prettier/prettier": "error",
       "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-empty-interface": "off",
       "comma-dangle": ["error", "always-multiline"],
       "arrow-parens": ["error", "always"],
       "@typescript-eslint/no-empty-interface": "off",
@@ -43,7 +46,7 @@ export default [
           pathGroups: [
             {
               pattern: "@scalify/**",
-              group: "builtin", 
+              group: "builtin",
               position: "before",
             },
             {
@@ -86,10 +89,7 @@ export default [
         },
       ],
     },
-    ignores: [
-      "build/**/*",
-      "!build/test.js",
-    ],
+    ...prettierConfig,
+    ignores: ["build/**/*", "!build/test.js"],
   },
-
 ];

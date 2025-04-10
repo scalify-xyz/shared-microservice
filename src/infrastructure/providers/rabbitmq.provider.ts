@@ -6,8 +6,7 @@ export class RabbitMQProvider {
   private connection!: Connection;
   private channel!: Channel;
 
-  private constructor() {
-  }
+  private constructor() {}
 
   static async create(url: string) {
     const provider = new RabbitMQProvider();
@@ -36,7 +35,10 @@ export class RabbitMQProvider {
     this.channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)));
   }
 
-  async consume(queue: string, callback: (message: NotificationModel) => void): Promise<void> {
+  async consume(
+    queue: string,
+    callback: (message: NotificationModel) => void,
+  ): Promise<void> {
     await this.channel.assertQueue(queue);
     this.channel.consume(queue, (msg) => {
       if (msg) {
